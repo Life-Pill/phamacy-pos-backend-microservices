@@ -1,4 +1,3 @@
-
 # Pharmacy POS System Backend
 
 <img width="170" alt="lifepilllogo" src="https://github.com/user-attachments/assets/43e3bb18-4435-4643-9d97-2b3539777a63">
@@ -24,9 +23,10 @@ The Pharmacy POS System Backend is the server-side component of our comprehensiv
 - **Scalability:** Built with scalability in mind, allowing the system to handle growing data volumes and increasing user demands effectively.
   
 - **Logging and Monitoring:** Implements logging and monitoring functionalities to track system activities, diagnose errors, and ensure smooth operation. Utilizes **Zipkin** for distributed tracing, **Grafana** for visualization and monitoring, and **Prometheus** for metrics collection and alerting.
-  
-- **Testing:** Includes unit tests and integration tests to verify the functionality and reliability of the backend components.
 
+- **Data Caching:** Implements data caching using **Redis** to enhance performance by reducing database load and improving response times.
+
+- **Testing:** Includes unit tests and integration tests to verify the functionality and reliability of the backend components. Utilizes **JUnit**, **Mockito**, and **Cucumber** for comprehensive testing.
 
 ## Technologies Used
 - Spring
@@ -41,17 +41,20 @@ The Pharmacy POS System Backend is the server-side component of our comprehensiv
 - RabbitMQ
 - Spring Cloud
 - Docker
+- Kubernetes
 - Grafana
 - Prometheus
 - Zipkin
+- Redis
+- JUnit
+- Mockito
+- Cucumber
 
 ## Microservice Architecture
 <img width="1443" alt="Screenshot 2024-07-12 at 4 19 14 AM" src="https://github.com/user-attachments/assets/a115728e-ddd1-49ad-98db-60afdff2e61b">
 
-
-## Monitoring 
+## Monitoring
 <img width="767" alt="Screenshot 2024-07-12 at 4 19 20 AM" src="https://github.com/user-attachments/assets/403e848d-0a08-4d3c-96d8-fd8d7d308565">
-
 
 ## Contributing
 Contributions are welcome! Please follow the contributing guidelines to contribute to this project.
