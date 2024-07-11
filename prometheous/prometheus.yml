@@ -1,0 +1,35 @@
+global:
+  scrape_interval:     10s
+  evaluation_interval: 10s
+
+scrape_configs:
+  - job_name: 'employee_service'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['emplpoyee-service:8086']
+        labels:
+          application: 'Employee Service Application'
+  - job_name: 'order_service'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['order-service:8085']
+        labels:
+          application: 'Order Service Application'
+  - job_name: 'inventory_service'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['inventory-service:8084']
+        labels:
+          application: 'Inventory Service Application'
+  - job_name: 'branch_service'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['branch-service:8082']
+        labels:
+          application: 'Branch Service Application'
+  - job_name: 'supplier_service'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['supplier-service:8087']
+        labels:
+          application: 'Supplier Service Application'
