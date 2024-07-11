@@ -1,6 +1,7 @@
 
 # Pharmacy POS System Backend
 
+<img width="170" alt="lifepilllogo" src="https://github.com/user-attachments/assets/43e3bb18-4435-4643-9d97-2b3539777a63">
 
 ## Description
 
@@ -26,23 +27,6 @@ The Pharmacy POS System Backend is the server-side component of our comprehensiv
   
 - **Testing:** Includes unit tests and integration tests to verify the functionality and reliability of the backend components.
 
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Life-Pill/pharmacy-pos-backend.git
-   ```
-
-2. Install the dependencies:
-   ```bash
-   cd pharmacy-pos-system-backend
-   mvn install
-   ```
-
-3. Start the application:
-   ```bash
-   mvn spring-boot:run
-   ```
 
 ## Technologies Used
 - Spring
@@ -62,9 +46,11 @@ The Pharmacy POS System Backend is the server-side component of our comprehensiv
 - Zipkin
 
 ## Microservice Architecture
+<img width="1443" alt="Screenshot 2024-07-12 at 4 19 14 AM" src="https://github.com/user-attachments/assets/a115728e-ddd1-49ad-98db-60afdff2e61b">
 
 
-## Monitoring Architecture
+## Monitoring 
+<img width="767" alt="Screenshot 2024-07-12 at 4 19 20 AM" src="https://github.com/user-attachments/assets/403e848d-0a08-4d3c-96d8-fd8d7d308565">
 
 
 ## Contributing
