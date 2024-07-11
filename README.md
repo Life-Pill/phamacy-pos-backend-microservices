@@ -29,10 +29,10 @@ The Pharmacy POS System Backend is the server-side component of our comprehensiv
 - **Testing:** Includes unit tests and integration tests to verify the functionality and reliability of the backend components. Utilizes **JUnit**, **Mockito**, and **Cucumber** for comprehensive testing.
 
 ## Technologies Used
+- Java
 - Spring
 - Spring Boot
 - AOP
-- Java
 - Spring Data JPA
 - Maven
 - Spring Security 6
@@ -46,6 +46,8 @@ The Pharmacy POS System Backend is the server-side component of our comprehensiv
 - Prometheus
 - Zipkin
 - Redis
+- Postgres
+- MongoDB
 - JUnit
 - Mockito
 - Cucumber
