@@ -1,0 +1,72 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/order-service
+    username: postgres
+    password: Prami@3990
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+server:
+  port: 8087
+
+eureka:
+  instance:
+    client:
+      serviceUrl:
+        defaultZone: http://localhost:8761/eureka/
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  #Actuator endpoints for Prometheus
+
+
+  tracing:
+    sampling:
+      probability: 1.0
+      #Actuator endpoints for Circuit Breaker
+  health:
+    circuitbreakers:
+      enabled: true
+    endpoints:
+      web:
+        exposure:
+          include: health
+    endpoint:
+      health:
+        show-details: always
+
+#Circular Breaker Resilience4j Configuration
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      INVENTORY-SERVICE:
+        registerHealthIndicator: true
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 5s
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowSize: 10
+        slidingWindowType: count_based
+
+
+message: Hello from order-service now running on port 8087

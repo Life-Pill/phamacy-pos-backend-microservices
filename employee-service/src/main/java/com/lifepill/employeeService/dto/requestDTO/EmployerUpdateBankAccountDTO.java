@@ -1,0 +1,22 @@
+package com.lifepill.employeeService.dto.requestDTO;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+/**
+ * The type Employer update bank account dto.
+ */
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+public class EmployerUpdateBankAccountDTO {
+    private long employerBankDetailsId;
+    private String bankName;
+    private String bankBranchName;
+    private String bankAccountNumber;
+    private String employerDescription;
+    private double monthlyPayment;
+    private boolean monthlyPaymentStatus;
+    private long employerId;
+}

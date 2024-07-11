@@ -1,0 +1,24 @@
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: SUPPLIER-SERVICE
+#          uri: lb://SUPPLIER-SERVICE
+#          predicates:
+#            - Path=/lifepill/v1/supplier/**
+#            - Path=/lifepill/v1/supplierCompanies/**
+#
+#  application:
+#    name: API-GATEWAY
+#  zipkin:
+#    base-url: http://127.0.0.1:9411/
+#management:
+#  tracing:
+#    sampling:
+#      probability: 1.0
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone : http://localhost:8761/eureka/
+#server:
+#  port: 9191

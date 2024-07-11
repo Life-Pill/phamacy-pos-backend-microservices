@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Authentication-Service" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/api-gateway" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/config-server" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/configuration-server-repository" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/employee-service" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/main-service" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pharmacy-pos-branch-service" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pharmacy-pos-inventory-service" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pharmacy-pos-order-service" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pharmacy-pos-supplier-service" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pos-system-authentication-service" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/service-registry" vcs="Git" />
+  </component>
+</project>

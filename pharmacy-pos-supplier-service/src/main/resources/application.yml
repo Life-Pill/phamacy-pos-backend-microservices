@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: SUPPLIER-SERVICE
+
+  config:
+    import: optional:configserver:http://localhost:8888
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+  zipkin:
+    base-url: http://127.0.0.1:9411/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  tracing:
+    sampling:
+      probability: 1.0

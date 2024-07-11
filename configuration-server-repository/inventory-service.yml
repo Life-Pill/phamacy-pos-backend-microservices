@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/inventory-service
+    username: postgres
+    password: Prami@3990
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+server:
+  port: 8085
+
+eureka:
+  instance:
+    client:
+      serviceUrl:
+        defaultZone: http://localhost:8761/eureka/
+
+message: Hello from inventory-service now running on port 8085

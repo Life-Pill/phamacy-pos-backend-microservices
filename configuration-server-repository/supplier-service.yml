@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: SUPPLIER-SERVICE
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/supplier-service
+    username: postgres
+    password: Prami@3990
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+server:
+  port: 8082
+
+eureka:
+  instance:
+    client:
+      serviceUrl:
+        defaultZone: http://localhost:8761/eureka/
+
+message: Hello from supplier-service now running on port 8082

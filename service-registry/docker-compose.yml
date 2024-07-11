@@ -1,0 +1,82 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    image: rabbitmq:latest
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  service-registry:
+    image: lifepilldh/service-registry:latest
+    ports:
+      - "8761:8761"
+    depends_on:
+      - rabbitmq
+
+  config-server:
+    image: lifepilldh/config-server:latest
+    ports:
+      - "8888:8888"
+    depends_on:
+      - rabbitmq
+
+  pos-system:
+    image: lifepill/pos-system:latest
+    ports:
+      - "8083:8083"
+    depends_on:
+      - service-registry
+      - config-server
+      - rabbitmq
+
+  pos-supplier-service:
+    image: lifepill/pos-supplier-service:latest
+    ports:
+      - "8082:8082"
+    depends_on:
+      - service-registry
+      - config-server
+      - rabbitmq
+
+  api-gateway:
+    image: lifepill/api-gateway:latest
+    ports:
+      - "9191:9191"
+    depends_on:
+      - service-registry
+      - config-server
+      - rabbitmq
+
+  pos-branch-service:
+    build:
+      context: .
+      dockerfile: Dockerfile.pos-branch-service
+    ports:
+      - "8084:8084"
+    depends_on:
+      - service-registry
+      - config-server
+      - rabbitmq
+
+  pos-inventory-service:
+    build:
+      context: .
+      dockerfile: Dockerfile.pos-inventory-service
+    ports:
+      - "8085:8085"
+    depends_on:
+      - service-registry
+      - config-server
+      - rabbitmq
+
+  pos-employee-service:
+    build:
+      context: .
+      dockerfile: Dockerfile.pos-employee-service
+    ports:
+      - "8086:8086"
+    depends_on:
+      - service-registry
+      - config-server
+      - rabbitmq

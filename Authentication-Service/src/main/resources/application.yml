@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: AUTHENTICATION-SERVICE
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/authentication-service
+    username: postgres
+    password: Prami@3990
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          lob:
+            non_contextual_creation: true #  to enable non-contextual LOB creation
+    show-sql: true
+  security:
+    user:
+      name: user
+      password: Prami@3990
+
+server:
+  port: 8090
+
+eureka:
+  instance:
+    client:
+      serviceUrl:
+        defaultZone: http://localhost:8761/eureka/
+

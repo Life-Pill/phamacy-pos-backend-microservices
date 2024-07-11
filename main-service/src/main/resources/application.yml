@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: MAIN-SERVICE
+
+  config:
+    import: optional:configserver:http://localhost:8888
+
+  zipkin:
+    base-url: http://127.0.0.1:9411/
+
+  sleuth:
+    sampler:
+      probability: 1.0
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

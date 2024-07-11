@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: ORDER-SERVICE
+
+  config:
+    import: optional:configserver:http://localhost:8888
+
+  zipkin:
+    base-url: http://127.0.0.1:9411/
+
+# Actuator Prometheus Endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus

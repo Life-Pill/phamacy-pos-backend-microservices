@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: CONFIG-SERVER
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Life-Pill/configuration-server-repository
+          clone-on-start: true
+          default-label: main
+
+  zipkin:
+    base-url: http://127.0.0.1:9411/
+
+server:
+    port: 8888
+
+eureka:
+  instance:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
+
+# Actuator Prometheus Endpoints
+management:
+    endpoints:
+        web:
+            exposure:
+                include: prometheus
